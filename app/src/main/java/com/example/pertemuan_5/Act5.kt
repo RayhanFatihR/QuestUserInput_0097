@@ -54,7 +54,9 @@ fun FormDataDiri(modifier: Modifier {
                 }
             }
         }
-        OutLinedTextField()
+        OutLinedTextField(
+            value = textAlamat,
+        )
     }
     )
 
