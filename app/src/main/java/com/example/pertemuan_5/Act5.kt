@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onVisibilityChangedNode
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
@@ -71,6 +72,8 @@ fun FormDataDiri(modifier: Modifier {
                 dimensionResource(R.dimen.padding_medium), top = dimensionResource(
                     id = R.dimen.padding_medium
             )),
+            thickness = dimensionResource(1dp),
+            color = Color.DarkGray
         )
     }
     )
