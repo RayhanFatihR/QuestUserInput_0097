@@ -12,6 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.selects.select
 
 @Composable
 fun FormDataDiri(modifier: Modifier {
@@ -43,9 +44,17 @@ fun FormDataDiri(modifier: Modifier {
                 Row(modifier = Modifier.selectable(
                     selected = textJK == item,
                     onClick = {textJK = item}
-                )) {}
+                ), verticalAlignment = Alignment.CenterHorizontally) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                    Text(item)
+                }
             }
         }
+        Out
     }
     )
 
