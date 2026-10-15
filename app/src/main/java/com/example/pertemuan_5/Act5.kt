@@ -1,6 +1,7 @@
 package com.example.pertemuan_5
 
 import android.R
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -105,7 +106,13 @@ fun FormDataDiri(modifier: Modifier {
             modifier = Modifier
                 .height(100.dp)
                 .width(300.dp)
-        )
+        ){
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)) {
+                Text(text = "Nama : "+nama, color = Color.White)
+                Text(text = "Gender :"+jenis, color = Color.White)
+                Text(text = "Alamat :"+alamat, color = Color.White)
+            }
+        }
     }
     )
 
