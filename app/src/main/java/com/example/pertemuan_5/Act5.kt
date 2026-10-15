@@ -2,6 +2,7 @@ package com.example.pertemuan_5
 
 import android.R
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
@@ -74,6 +75,16 @@ fun FormDataDiri(modifier: Modifier {
             )),
             thickness = dimensionResource(1dp),
             color = Color.DarkGray
+        )
+        Button(
+            modifier = Modifier.fillMaxWidth(1f),
+            // the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama=textNama
+                jenis=textJK
+                alamat=textAlamat
+            }
         )
     }
     )
